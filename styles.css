@@ -1,0 +1,21 @@
+#main-container {
+  padding-top: 30px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.labeled-slider {
+  padding: 10px 0px 10px 0px;
+}
+
+.label {
+  padding-right: 10px;
+}
+
+.slider {
+  padding-right: 10px:;
+}
+
+.units {
+  padding-left: 10px;
+}
