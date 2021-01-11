@@ -1,6 +1,7 @@
 # Quick start
 
-1. `git clone <>`
-2. `npm install`
-3. Open browser to local location of `index.html`
-4. Most of the interesting code lies in `LabeledSlider.js` and `SimpleInterestCalculator.js`
+1. `git clone git@github.com:benracine/simple-interest-calculator.git`
+2. Move to that folder location
+3. `npm install`
+4. Open browser to local location of `index.html`
+5. Note that most of the interesting code lies in `LabeledSlider.js` and `SimpleInterestCalculator.js`
