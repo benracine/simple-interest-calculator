@@ -37,9 +37,9 @@ const model = (
     });
 };
 
-const view = ( bmi$, initialSliderDOM, interestSliderDOM, yearsSliderDom) => {
-  return xs.combine(bmi$, initialSliderDOM, interestSliderDOM, yearsSliderDom)
-    .map(([bmi, initialVTree, interestVTree, yearsVTree]) =>
+const view = ( fv$, initialSliderDOM, interestSliderDOM, yearsSliderDom) => {
+  return xs.combine(fv$, initialSliderDOM, interestSliderDOM, yearsSliderDom)
+    .map(([fv, initialVTree, interestVTree, yearsVTree]) =>
       div([
         initialVTree,
         interestVTree,
@@ -47,7 +47,7 @@ const view = ( bmi$, initialSliderDOM, interestSliderDOM, yearsSliderDom) => {
         h(
           'h2',
           {style: {'padding-top': '20px'}},
-          [`Future value is ${bmi} thousand dollars.`]
+          [`Future value is ${fv} thousand dollars.`]
         )
       ])
     );
@@ -55,8 +55,8 @@ const view = ( bmi$, initialSliderDOM, interestSliderDOM, yearsSliderDom) => {
 
 const SimpleInterestCalculator = (sources) => {
   const { initSlider, intSlider, yearsSlider } = intent(sources);
-  const bmi$ = model(initSlider.value, intSlider.value, yearsSlider.value);
-  const vdom$ = view(bmi$, initSlider.DOM, intSlider.DOM, yearsSlider.DOM);
+  const fv$ = model(initSlider.value, intSlider.value, yearsSlider.value);
+  const vdom$ = view(fv$, initSlider.DOM, intSlider.DOM, yearsSlider.DOM);
   return {
     DOM: vdom$
   };
